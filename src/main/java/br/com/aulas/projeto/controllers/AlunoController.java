@@ -33,7 +33,32 @@ public class AlunoController {
     }
 
     @PostMapping
-    public ResponseEntity<?> postAlunos() {
-        return new ResponseEntity<>("Post Alunos", HttpStatus.OK);
+    public ResponseEntity<?> postAlunos(@RequestBody List<Aluno> alunos) {
+        return salvarAlunos(alunos);
+    }
+
+    @PatchMapping
+    public ResponseEntity<?> patchAlunos(@RequestBody List<Aluno> alunos) {
+        return salvarAlunos(alunos);
+    }
+
+    private static ResponseEntity<?> salvarAlunos(List<Aluno> alunos) {
+        if (alunos == null || alunos.isEmpty()) {
+            return new ResponseEntity<>("Lista inválida", HttpStatus.BAD_REQUEST);
+        }
+
+        for (int i = 0; i < alunos.size(); i++) {
+            Aluno aluno = alunos.get(i);
+
+            if (aluno.getId() <= 0) {
+                return new ResponseEntity<>(String.format("Aluno da linha %s com Id inválido!", i+ 1), HttpStatus.BAD_REQUEST);
+            }
+
+            if (aluno.getNome() == null || aluno.getNome() == "") {
+                return new ResponseEntity<>(String.format("Aluno da linha %s com Id inválido!", i+ 1), HttpStatus.BAD_REQUEST);
+            }
+        }
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
