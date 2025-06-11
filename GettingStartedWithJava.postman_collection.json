@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "4bfc304f-4b0c-4ad1-9471-b86b1ba29b78",
+		"name": "GettingStartedWithJava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15107572"
+	},
+	"item": [
+		{
+			"name": "Get All Alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_Url}}/alunos",
+					"host": [
+						"{{API_Url}}"
+					],
+					"path": [
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Alunos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{API_Url}}/alunos",
+					"host": [
+						"{{API_Url}}"
+					],
+					"path": [
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
