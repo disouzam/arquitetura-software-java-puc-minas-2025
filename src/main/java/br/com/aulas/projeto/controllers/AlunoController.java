@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "public")
+@RequestMapping(value = "alunos")
 public class AlunoController {
 
-    @GetMapping(value = "alunos")
+    @GetMapping
     public ResponseEntity<?> recuperaListaAlunos() {
         return new ResponseEntity<>("Get Alunos", HttpStatus.OK);
     }
 
-    @PostMapping(value = "alunos")
+    @PostMapping
     public ResponseEntity<?> postAlunos() {
         return new ResponseEntity<>("Post Alunos", HttpStatus.OK);
     }

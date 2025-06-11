@@ -12,12 +12,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{API_Url}}/public/alunos",
+					"raw": "{{API_Url}}/alunos",
 					"host": [
 						"{{API_Url}}"
 					],
 					"path": [
-						"public",
 						"alunos"
 					]
 				}
@@ -30,12 +29,11 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{API_Url}}/public/alunos",
+					"raw": "{{API_Url}}/alunos",
 					"host": [
 						"{{API_Url}}"
 					],
 					"path": [
-						"public",
 						"alunos"
 					]
 				}
